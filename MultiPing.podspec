@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 	s.name        = "MultiPing"
 	s.platform    = :ios, "8.0"
-	s.version     = "0.0.1"
+	s.version     = "0.1.0"
 	s.summary     = "Simple pod for sending multiple ping requests at once."
 
 	s.description = <<-DESC
-			Simple pod for sending multiple ping requests at once.
+			Use Ping.start(address:timeout:retries:completion) to start pinging given address. You can handle the result of ping in completion block that takes as an argument SimplePingResponse enum, providing result info. At any time you can stop pinging of an address with Ping.stop(address)
 			DESC
 
 	s.license = { :type => "MIT", :file => "LICENSE" }
