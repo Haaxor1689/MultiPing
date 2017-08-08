@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/Pods_MultiPing.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-MultiPing-umbrella.h",
+          'external-contents': "/Users/marosbetko/Projects/MultiPing/Pods/Target Support Files/Pods-MultiPing/Pods-MultiPing-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_MultiPing-Swift.h",
+          'external-contents': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/Pods_MultiPing.framework/Headers/Pods_MultiPing-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/Pods_MultiPing.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-MultiPing.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

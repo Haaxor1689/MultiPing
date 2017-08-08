@@ -1,0 +1,10 @@
+framework module MultiPing {
+  umbrella header "MultiPing.h"
+
+  export *
+  module * { export * }
+}
+
+module MultiPing.__Swift {
+    exclude header "MultiPing-Swift.h"
+}

@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/MultiPing.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "MultiPing-Swift.h",
+          'external-contents': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/MultiPing.framework/Headers/MultiPing-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "MultiPing.h",
+          'external-contents': "/Users/marosbetko/Projects/MultiPing/MultiPing/MultiPing.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/MultiPing.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Intermediates/MultiPing.build/Debug-iphoneos/MultiPing.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

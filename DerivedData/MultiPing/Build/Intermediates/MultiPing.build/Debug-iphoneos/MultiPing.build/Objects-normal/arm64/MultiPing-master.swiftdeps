@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "54f773659df63bb8d35b4c06af768e3e"
+build_time: [555494935, 316216000]
+inputs:
+  "/Users/marosbetko/Projects/MultiPing/MultiPing/Ping.swift": !dirty [554903573, 0]

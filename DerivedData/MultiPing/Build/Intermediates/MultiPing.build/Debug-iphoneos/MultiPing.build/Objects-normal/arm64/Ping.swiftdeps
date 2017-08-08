@@ -1,0 +1,380 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PingCompletionBlock"
+- "SimplePingResponse"
+- "Ping"
+provides-nominal:
+- "O9MultiPing18SimplePingResponse"
+- "C9MultiPing4Ping"
+provides-member:
+- ["O9MultiPing18SimplePingResponse", ""]
+- ["C9MultiPing4Ping", ""]
+provides-dynamic-lookup:
+- "stop"
+- "timedOut"
+depends-top-level:
+- !private "+"
+- !private "-"
+- !private "-="
+- !private "=="
+- !private ">"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- "Data"
+- !private "Date"
+- "Error"
+- "Int"
+- "NSObject"
+- "Ping"
+- "PingCompletionBlock"
+- "PingConfig"
+- "SimplePing"
+- "SimplePingDelegate"
+- "SimplePingResponse"
+- "String"
+- !private "StringLiteralType"
+- "TimeInterval"
+- !private "Timer"
+- "UInt16"
+- !private "print"
+depends-member:
+- !private ["Ps9AnyObject", "Date"]
+- ["Ps9AnyObject", "Ping"]
+- ["Ps9AnyObject", "PingConfig"]
+- ["Ps9AnyObject", "SimplePing"]
+- ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "Timer"]
+- !private ["Ps9AnyObject", "completion"]
+- !private ["Ps9AnyObject", "getConfig"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "invalidate"]
+- !private ["Ps9AnyObject", "pingStart"]
+- !private ["Ps9AnyObject", "pinger"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "removeTask"]
+- !private ["Ps9AnyObject", "retries"]
+- !private ["Ps9AnyObject", "retryPing"]
+- !private ["Ps9AnyObject", "scheduledTimer"]
+- !private ["Ps9AnyObject", "shared"]
+- !private ["Ps9AnyObject", "tasks"]
+- !private ["Ps9AnyObject", "timedOut"]
+- !private ["Ps9AnyObject", "timeout"]
+- !private ["Ps9AnyObject", "timer"]
+- !private ["Ps9AnyObject", "userInfo"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps7CVarArg", "Date"]
+- ["Ps7CVarArg", "Ping"]
+- ["Ps7CVarArg", "PingConfig"]
+- ["Ps7CVarArg", "SimplePing"]
+- ["Ps7CVarArg", "String"]
+- !private ["Ps7CVarArg", "Timer"]
+- !private ["Ps7CVarArg", "getConfig"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "invalidate"]
+- !private ["Ps7CVarArg", "print"]
+- !private ["Ps7CVarArg", "removeTask"]
+- !private ["Ps7CVarArg", "retryPing"]
+- !private ["Ps7CVarArg", "scheduledTimer"]
+- !private ["Ps7CVarArg", "shared"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "tasks"]
+- !private ["Ps7CVarArg", "timedOut"]
+- !private ["Ps7CVarArg", "userInfo"]
+- ["Ps7CVarArg", ""]
+- ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps28CustomDebugStringConvertible", "Date"]
+- ["Ps28CustomDebugStringConvertible", "Ping"]
+- ["Ps28CustomDebugStringConvertible", "PingConfig"]
+- ["Ps28CustomDebugStringConvertible", "SimplePing"]
+- ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "Timer"]
+- !private ["Ps28CustomDebugStringConvertible", "getConfig"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "invalidate"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "removeTask"]
+- !private ["Ps28CustomDebugStringConvertible", "retryPing"]
+- !private ["Ps28CustomDebugStringConvertible", "scheduledTimer"]
+- !private ["Ps28CustomDebugStringConvertible", "shared"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "tasks"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSinceReferenceDate"]
+- !private ["Ps28CustomDebugStringConvertible", "timedOut"]
+- !private ["Ps28CustomDebugStringConvertible", "userInfo"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps17CustomReflectable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps23CustomStringConvertible", "Date"]
+- ["Ps23CustomStringConvertible", "Ping"]
+- ["Ps23CustomStringConvertible", "PingConfig"]
+- ["Ps23CustomStringConvertible", "SimplePing"]
+- ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "Timer"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "getConfig"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "invalidate"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "removeTask"]
+- !private ["Ps23CustomStringConvertible", "retryPing"]
+- !private ["Ps23CustomStringConvertible", "scheduledTimer"]
+- !private ["Ps23CustomStringConvertible", "shared"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "tasks"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSinceReferenceDate"]
+- !private ["Ps23CustomStringConvertible", "timedOut"]
+- !private ["Ps23CustomStringConvertible", "userInfo"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["V10Foundation4Date", "timeIntervalSinceReferenceDate"]
+- ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps9Equatable", "Date"]
+- ["Ps9Equatable", "Ping"]
+- ["Ps9Equatable", "PingConfig"]
+- ["Ps9Equatable", "SimplePing"]
+- ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "Timer"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "getConfig"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "invalidate"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "removeTask"]
+- !private ["Ps9Equatable", "retryPing"]
+- !private ["Ps9Equatable", "scheduledTimer"]
+- !private ["Ps9Equatable", "shared"]
+- !private ["Ps9Equatable", "tasks"]
+- !private ["Ps9Equatable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps9Equatable", "timedOut"]
+- !private ["Ps9Equatable", "userInfo"]
+- ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps30ExpressibleByDictionaryLiteral", "init"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "Date"]
+- ["Ps8Hashable", "Ping"]
+- ["Ps8Hashable", "PingConfig"]
+- ["Ps8Hashable", "SimplePing"]
+- ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "Timer"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "getConfig"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "invalidate"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "removeTask"]
+- !private ["Ps8Hashable", "retryPing"]
+- !private ["Ps8Hashable", "scheduledTimer"]
+- !private ["Ps8Hashable", "shared"]
+- !private ["Ps8Hashable", "tasks"]
+- !private ["Ps8Hashable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps8Hashable", "timedOut"]
+- !private ["Ps8Hashable", "userInfo"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Data"]
+- !private ["CSo8NSObject", "Date"]
+- ["CSo8NSObject", "Error"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "Ping"]
+- ["CSo8NSObject", "PingCompletionBlock"]
+- ["CSo8NSObject", "PingConfig"]
+- ["CSo8NSObject", "SimplePing"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "TimeInterval"]
+- !private ["CSo8NSObject", "Timer"]
+- ["CSo8NSObject", "UInt16"]
+- !private ["CSo8NSObject", "getConfig"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "invalidate"]
+- !private ["CSo8NSObject", "print"]
+- ["CSo8NSObject", "removeTask"]
+- ["CSo8NSObject", "retryPing"]
+- !private ["CSo8NSObject", "scheduledTimer"]
+- ["CSo8NSObject", "shared"]
+- ["CSo8NSObject", "start"]
+- ["CSo8NSObject", "stop"]
+- ["CSo8NSObject", "tasks"]
+- ["CSo8NSObject", "timedOut"]
+- !private ["CSo8NSObject", "userInfo"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "Date"]
+- ["PSo16NSObjectProtocol", "Ping"]
+- ["PSo16NSObjectProtocol", "PingConfig"]
+- ["PSo16NSObjectProtocol", "SimplePing"]
+- ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "Timer"]
+- !private ["PSo16NSObjectProtocol", "getConfig"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "invalidate"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "removeTask"]
+- !private ["PSo16NSObjectProtocol", "retryPing"]
+- !private ["PSo16NSObjectProtocol", "scheduledTimer"]
+- !private ["PSo16NSObjectProtocol", "shared"]
+- !private ["PSo16NSObjectProtocol", "tasks"]
+- !private ["PSo16NSObjectProtocol", "timedOut"]
+- !private ["PSo16NSObjectProtocol", "userInfo"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["C9MultiPing4Ping", "Data"]
+- !private ["C9MultiPing4Ping", "Date"]
+- ["C9MultiPing4Ping", "Error"]
+- ["C9MultiPing4Ping", "Int"]
+- ["C9MultiPing4Ping", "Ping"]
+- ["C9MultiPing4Ping", "PingCompletionBlock"]
+- ["C9MultiPing4Ping", "PingConfig"]
+- ["C9MultiPing4Ping", "SimplePing"]
+- ["C9MultiPing4Ping", "String"]
+- ["C9MultiPing4Ping", "TimeInterval"]
+- !private ["C9MultiPing4Ping", "Timer"]
+- ["C9MultiPing4Ping", "UInt16"]
+- ["C9MultiPing4Ping", "deinit"]
+- !private ["C9MultiPing4Ping", "getConfig"]
+- ["C9MultiPing4Ping", "init"]
+- !private ["C9MultiPing4Ping", "print"]
+- !private ["C9MultiPing4Ping", "removeTask"]
+- !private ["C9MultiPing4Ping", "retryPing"]
+- !private ["C9MultiPing4Ping", "shared"]
+- ["C9MultiPing4Ping", "start"]
+- ["C9MultiPing4Ping", "stop"]
+- !private ["C9MultiPing4Ping", "tasks"]
+- !private ["C9MultiPing4Ping", "timedOut"]
+- !private ["P10Foundation20ReferenceConvertible", "timeIntervalSinceReferenceDate"]
+- ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "subscript"]
+- ["O9MultiPing18SimplePingResponse", "Error"]
+- ["O9MultiPing18SimplePingResponse", "TimeInterval"]
+- ["O9MultiPing18SimplePingResponse", "notSent"]
+- ["O9MultiPing18SimplePingResponse", "notStarted"]
+- ["O9MultiPing18SimplePingResponse", "succeeded"]
+- ["O9MultiPing18SimplePingResponse", "timedOut"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["CSo5Timer", "invalidate"]
+- !private ["CSo5Timer", "scheduledTimer"]
+- !private ["CSo5Timer", "userInfo"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Date"]
+- ["Ps9_Hashable", "Ping"]
+- ["Ps9_Hashable", "PingConfig"]
+- ["Ps9_Hashable", "SimplePing"]
+- ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "Timer"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "getConfig"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "invalidate"]
+- !private ["Ps9_Hashable", "print"]
+- !private ["Ps9_Hashable", "removeTask"]
+- !private ["Ps9_Hashable", "retryPing"]
+- !private ["Ps9_Hashable", "scheduledTimer"]
+- !private ["Ps9_Hashable", "shared"]
+- !private ["Ps9_Hashable", "tasks"]
+- !private ["Ps9_Hashable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps9_Hashable", "timedOut"]
+- !private ["Ps9_Hashable", "userInfo"]
+- ["Ps9_Hashable", ""]
+- ["Ps10_Indexable", "init"]
+- !private ["Ps10_Indexable", "subscript"]
+- ["Ps14_IndexableBase", "init"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "timeIntervalSinceReferenceDate"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- "Ps7CVarArg"
+- "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "V10Foundation4Date"
+- "Vs10Dictionary"
+- "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "C9MultiPing4Ping"
+- !private "P10Foundation20ReferenceConvertible"
+- "Ps8Sequence"
+- "O9MultiPing18SimplePingResponse"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "CSo5Timer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps10_Indexable"
+- "Ps14_IndexableBase"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/marosbetko/Projects/MultiPing/MultiPing/MultiPing.h"
+- "/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Intermediates/MultiPing.build/Debug-iphoneos/MultiPing.build/unextended-module.modulemap"
+interface-hash: "9d49821a5447a6e096aa79abc187b449"

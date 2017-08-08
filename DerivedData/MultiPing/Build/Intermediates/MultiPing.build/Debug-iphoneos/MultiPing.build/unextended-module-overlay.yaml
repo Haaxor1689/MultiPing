@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Products/Debug-iphoneos/MultiPing.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/marosbetko/Projects/MultiPing/DerivedData/MultiPing/Build/Intermediates/MultiPing.build/Debug-iphoneos/MultiPing.build/unextended-module.modulemap',
+    }]
+  }]
+}
