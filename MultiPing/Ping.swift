@@ -30,8 +30,8 @@ fileprivate class PingConfig {
 	
 	init(_ delegate: Ping, _ address: String, _ timeout: TimeInterval, _ retries: Int, _ completion: PingCompletionBlock?) {
 		pinger = SimplePing(hostName: address)
-		pinger.start()
 		pinger.delegate = delegate
+		pinger.start()
 		
 		self.completion = completion
 		self.timeout = timeout
@@ -40,24 +40,33 @@ fileprivate class PingConfig {
 }
 
 public class Ping: NSObject, SimplePingDelegate {
-	private static var tasks = [String : PingConfig]()
-	private static var pinger: SimplePing!
-	private static let shared = Ping()
+	public static let shared = Ping()
+	private var tasks = [String : PingConfig]()
 	
-	public class func start(_ address: String, timeout: TimeInterval = 3, retries: Int = 5, completion: PingCompletionBlock? = nil) {
+	public func start(_ address: String, timeout: TimeInterval = 3, retries: Int = 5, completion: PingCompletionBlock? = nil) {
 		guard tasks[address] == nil else {
 			print("Alredy pinging " + address)
 			return
 		}
 		
-		tasks[address] = PingConfig(shared, address, timeout, retries, completion)
+		tasks[address] = PingConfig(self, address, timeout, retries, completion)
 	}
 	
-	public class func stop(_ address: String) {
+	public func stop(_ address: String) {
 		removeTask(for: address)
 	}
 	
-	private class func getConfig(for pinger: SimplePing) -> (String, PingConfig)? {
+	public func stopAll() {
+		for (address, config) in tasks {
+			config.timer?.invalidate()
+			config.pinger.stop()
+			
+			tasks.removeValue(forKey: address)
+			print("Ping " + address + ": removed")
+		}
+	}
+	
+	private func getConfig(for pinger: SimplePing) -> (String, PingConfig)? {
 		for (name, config) in tasks {
 			if config.pinger == pinger {
 				return (name, config)
@@ -66,7 +75,7 @@ public class Ping: NSObject, SimplePingDelegate {
 		return nil
 	}
 	
-	private class func removeTask(for address: String) {
+	private func removeTask(for address: String) {
 		guard let config = tasks[address] else {
 			print("Tried to remove non-existent task with address " + address)
 			return
@@ -74,27 +83,26 @@ public class Ping: NSObject, SimplePingDelegate {
 		
 		config.timer?.invalidate()
 		config.pinger.stop()
-		tasks[address] = nil
+		tasks.removeValue(forKey: address)
 		print("Ping " + address + ": removed")
 	}
 	
 	// MARK: - SimplePingDelegate methods
-	
 	public func simplePing(_ pinger: SimplePing, didStartWithAddress address: Data) {
-		guard let (address, config) = Ping.getConfig(for: pinger) else {
+		guard let (address, config) = getConfig(for: pinger) else {
 			print("Error: callback from unregistered pinger.")
 			return
 		}
 		
 		print("Ping " + address + ": didStartWithAddress")
 		
-		config.timer = Timer.scheduledTimer(timeInterval: config.timeout, target: Ping.shared, selector: #selector(timedOut), userInfo: (address, config), repeats: false)
+		config.timer = Timer.scheduledTimer(timeInterval: config.timeout, target: self, selector: #selector(timedOut), userInfo: (address, config), repeats: false)
 		config.pingStart = Date.timeIntervalSinceReferenceDate
 		config.pinger.send(with: nil)
 	}
 	
 	public func simplePing(_ pinger: SimplePing, didSendPacket packet: Data, sequenceNumber: UInt16) {
-		guard let (address, _) = Ping.getConfig(for: pinger) else {
+		guard let (address, _) = getConfig(for: pinger) else {
 			print("Error: callback from unregistered pinger.")
 			return
 		}
@@ -103,14 +111,14 @@ public class Ping: NSObject, SimplePingDelegate {
 	}
 	
 	public func simplePing(_ pinger: SimplePing, didReceivePingResponsePacket packet: Data, sequenceNumber: UInt16) {
-		guard let (address, config) = Ping.getConfig(for: pinger) else {
+		guard let (address, config) = getConfig(for: pinger) else {
 			print("Error: callback from unregistered pinger.")
 			return
 		}
 		
 		print("Ping " + address + ": didReceivePingResponsePacket")
 		config.completion?(.succeeded(withLatency: Date.timeIntervalSinceReferenceDate - config.pingStart))
-		Ping.removeTask(for: address)
+		removeTask(for: address)
 	}
 	
 	public func simplePing(_ pinger: SimplePing, didReceiveUnexpectedPacket packet: Data) {
@@ -118,7 +126,7 @@ public class Ping: NSObject, SimplePingDelegate {
 	}
 	
 	public func simplePing(_ pinger: SimplePing, didFailToSendPacket packet: Data, sequenceNumber: UInt16, error: Error) {
-		guard let (address, config) = Ping.getConfig(for: pinger) else {
+		guard let (address, config) = getConfig(for: pinger) else {
 			print("Error: callback from unregistered pinger.")
 			return
 		}
@@ -126,12 +134,12 @@ public class Ping: NSObject, SimplePingDelegate {
 		print("Ping " + address + ": didFailToSendPacket")
 		retryPing(for: address, withConfig: config, else: {
 			config.completion?(.notSent(withError: error))
-			Ping.removeTask(for: address)
+			self.removeTask(for: address)
 		})
 	}
 	
 	public func simplePing(_ pinger: SimplePing, didFailWithError error: Error) {
-		guard let (address, config) = Ping.getConfig(for: pinger) else {
+		guard let (address, config) = getConfig(for: pinger) else {
 			print("Error: callback from unregistered pinger.")
 			return
 		}
@@ -139,7 +147,7 @@ public class Ping: NSObject, SimplePingDelegate {
 		print("Ping " + address + ": didFailWithError")
 		retryPing(for: address, withConfig: config, else: {
 			config.completion?(.notStarted(withError: error))
-			Ping.removeTask(for: address)
+			self.removeTask(for: address)
 		})
 	}
 	
@@ -152,7 +160,7 @@ public class Ping: NSObject, SimplePingDelegate {
 		print("Ping " + address + ": didTimedOut")
 		retryPing(for: address, withConfig: config, else: {
 			config.completion?(.timedOut)
-			Ping.removeTask(for: address)
+			self.removeTask(for: address)
 		})
 	}
 	
@@ -162,7 +170,7 @@ public class Ping: NSObject, SimplePingDelegate {
 			config.retries -= 1
 			
 			config.timer?.invalidate()
-			config.timer = Timer.scheduledTimer(timeInterval: config.timeout, target: Ping.shared, selector: #selector(timedOut), userInfo: (address, config), repeats: false)
+			config.timer = Timer.scheduledTimer(timeInterval: config.timeout, target: self, selector: #selector(timedOut), userInfo: (address, config), repeats: false)
 			config.pingStart = Date.timeIntervalSinceReferenceDate
 			config.pinger.send(with: nil)
 		} else {
