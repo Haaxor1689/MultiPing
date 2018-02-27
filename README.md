@@ -1,7 +1,11 @@
 # MultiPing
+
 ## Description
-Simple pod, that allows you to ping multiple addresses at the same time.
+
+Swift library for sending multiple asynchronous ping request to multiple servers. Available on cocoapods.
+
 ## Usage
+
 To start pinging call `Ping.start(address:timeout:retries:completion)` on a `Ping.shared` instance, or create your own instance of Ping class. All arguments except address are optional and can be left out.
 
 ```swift
@@ -30,6 +34,7 @@ Ping.shared.stopAll()
 ```
 
 ## Installation
+
 Into your Podfile add:
 
 ```
@@ -37,6 +42,7 @@ pod 'MultiPing'
 ```
 
 ## Chagelog
+
 * 0.1.1:
 	* Changed to singleton pattern
 	* You can start ping on a static `shared` instance or create a new instance of Ping class with it's default constructor
